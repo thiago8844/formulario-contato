@@ -8,18 +8,68 @@
 body {
   font-family: inter;
 }
+.mensagens-page-button {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  text-decoration: none;
+}
 
+.mensagens-page-button:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mensagens-page-button button {
+  border: none;
+  padding: 8px 24px;
+  padding-right: 48px;
+  font-weight: bold;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(46, 46, 46, 1);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(46, 46, 46, 1);
+  box-shadow: 0px 0px 10px -2px rgba(46, 46, 46, 1);
+  transition: 0.3s ease;
+
+}
+.mensagens-page-button button svg {
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 6px;
+  transition: 0.3s ease;
+}
+
+.mensagens-page-button button:hover svg {
+  right: 0;
+}
+
+.mensagens-page-button button:hover {
+  background-color: black;
+  box-shadow: 0px 0px 15px -2px rgb(3, 3, 3);
+}
 .main-contact-form {
   background-color: rgb(240, 240, 240);
-  width: fit-content;
+  width: 60%;
   margin: 100px auto;
   padding: 16px 24px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 0px 10px -2px rgba(46, 46, 46, 1);
   -moz-box-shadow: 0px 0px 10px -2px rgba(46, 46, 46, 1);
   box-shadow: 0px 0px 10px -2px rgba(46, 46, 46, 1);
+  max-width: 600px;
 }
-
+h1 {
+  text-align: center;
+}
 /* FORMULÁRIO DE CONTATO */
 .contact-form {
   margin-top: 16px;
@@ -29,15 +79,17 @@ body {
 
 .contact-form .top-fields {
   display: grid;
+  width: 100%;
   grid-template-columns: 50% 50%;
   row-gap: 16px;
-  column-gap: 16px;
+
 }
 /* CAIXA DE INPUT*/
 .contact-form .input-box {
   position: relative;
   display: flex;
   height: 35px;
+  
 }
 
 .contact-form .input-box svg {
@@ -52,6 +104,16 @@ body {
 .contact-form .input-box input {
   padding: 8px 16px;
   padding-left: 32px;
+  margin-right: 16px;
+  width: 100%;
+}
+.contact-form .input-box:last-child input {
+  margin-right: 0px !important;
+
+}
+.contact-form .input-box:nth-child(2) input{
+  margin-right: 0px !important;
+
 }
 
 .contact-form .message-input-box {
@@ -98,5 +160,3 @@ body {
 
   transform: scale(1.03);
 }
-
-.contact-form input[type="submit"]:
